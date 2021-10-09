@@ -22,7 +22,7 @@ func (p *Park) Welcome(enjoyer *role.Enjoyer) {
 	p.enjoyers = append(p.enjoyers, enjoyer)
 }
 
-func (p *Park) Start() {
+func (p *Park) Run() {
 	fmt.Printf("%s start to sell tickets\n", p.Name)
 	for _, enjoyer := range p.enjoyers {
 		enjoyer.BuyTicket()

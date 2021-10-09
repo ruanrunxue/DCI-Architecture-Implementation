@@ -29,7 +29,7 @@ func (s *School) Receive(student *role.Student) {
 	fmt.Printf("%s Receive stduent %+v\n", s.Name, student.StudentCard)
 }
 
-func (s *School) Start() {
+func (s *School) Run() {
 	fmt.Printf("%s start class\n", s.Name)
 	for _, student := range s.students {
 		student.Study()

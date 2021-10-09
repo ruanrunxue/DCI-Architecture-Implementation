@@ -9,7 +9,7 @@ import (
 
 func DDD() {
 	paul := entity.NewPeople("Paul")
-	mit := aggregate.NewSchool("mit")
+	mit := aggregate.NewSchool("MIT")
 	google := aggregate.NewCompany("Google")
 	home := aggregate.NewHome()
 	summerPalace := aggregate.NewPark("Summer Palace")
@@ -30,23 +30,23 @@ func DDD() {
 
 func DCI() {
 	paul := object.NewPeople("Paul")
-	mit := context.NewSchool("mit")
+	mit := context.NewSchool("MIT")
 	google := context.NewCompany("Google")
 	home := context.NewHome()
 	summerPalace := context.NewPark("Summer Palace")
 
 	// 上学
 	mit.Receive(paul.CastStudent())
-	mit.Start()
+	mit.Run()
 	// 回家
 	home.ComeBack(paul.CastHuman())
-	home.Start()
+	home.Run()
 	// 工作
 	google.Employ(paul.CastWorker())
-	google.Start()
+	google.Run()
 	// 公园游玩
 	summerPalace.Welcome(paul.CastEnjoyer())
-	summerPalace.Start()
+	summerPalace.Run()
 
 }
 

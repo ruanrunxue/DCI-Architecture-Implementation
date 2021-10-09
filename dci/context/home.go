@@ -18,7 +18,7 @@ func (h *Home) ComeBack(human *role.Human) {
 	h.me = human
 }
 
-func (h *Home) Start() {
+func (h *Home) Run() {
 	h.me.Eat()
 	h.me.PlayGame()
 	h.me.Sleep()

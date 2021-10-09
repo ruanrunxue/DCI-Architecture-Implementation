@@ -29,7 +29,7 @@ func (c *Company) Employ(worker *role.Worker) {
 	fmt.Printf("%s Employ worker %s\n", c.Name, worker.WorkCard.Name)
 }
 
-func (c *Company) Start() {
+func (c *Company) Run() {
 	fmt.Printf("%s start work\n", c.Name)
 	for _, worker := range c.workers {
 		worker.Work()
