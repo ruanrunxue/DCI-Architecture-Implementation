@@ -6,13 +6,13 @@ import (
 )
 
 type Student struct {
-	data.StudentCard
 	// Student同时也是个普通人，因此组合了Human角色
-	CastedRoles studentCastedRoles
+	HumanTrait
+	data.StudentCard
 }
 
-type studentCastedRoles interface {
-	HumanRole
+func (s *Student) Compose(trait HumanTrait) {
+	s.HumanTrait = trait
 }
 
 func (s *Student) Study() {

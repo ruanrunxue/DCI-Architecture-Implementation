@@ -10,7 +10,7 @@ type Human struct {
 	data.Account
 }
 
-type HumanRole interface {
+type HumanTrait interface {
 	CastHuman() *Human
 }
 

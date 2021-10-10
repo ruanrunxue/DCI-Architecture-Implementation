@@ -28,9 +28,9 @@ func NewPeople(name string) *People {
 		},
 	}
 	// 初始化各角色
-	people.Student.CastedRoles = people
-	people.Worker.CastedRoles = people
-	people.Enjoyer.CastedRoles = people
+	people.Student.Compose(people)
+	people.Worker.Compose(people)
+	people.Enjoyer.Compose(people)
 	return people
 }
 
