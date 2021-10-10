@@ -11,6 +11,11 @@ type Student struct {
 	data.StudentCard
 }
 
+// 学生角色特征
+type StudentTrait interface {
+	CastStudent() *Student
+}
+
 func (s *Student) Compose(trait HumanTrait) {
 	s.HumanTrait = trait
 }

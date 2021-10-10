@@ -18,7 +18,7 @@ func NewPark(name string) *Park {
 }
 
 func (p *Park) Welcome(enjoyer *role.Enjoyer) {
-	fmt.Printf("%+v come park %s\n", enjoyer.CastedRoles.CastHuman().IdentityCard, p.Name)
+	fmt.Printf("%+v come park %s\n", enjoyer.CastHuman().IdentityCard, p.Name)
 	p.enjoyers = append(p.enjoyers, enjoyer)
 }
 

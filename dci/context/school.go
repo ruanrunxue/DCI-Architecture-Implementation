@@ -22,7 +22,7 @@ func NewSchool(name string) *School {
 func (s *School) Receive(student *role.Student) {
 	student.StudentCard = data.StudentCard{
 		Id:     rand.Uint32(),
-		Name:   student.CastedRoles.CastHuman().IdentityCard.Name,
+		Name:   student.CastHuman().IdentityCard.Name,
 		School: s.Name,
 	}
 	s.students = append(s.students, student)
@@ -36,7 +36,7 @@ func (s *School) Run() {
 	}
 	fmt.Println("students start to eating")
 	for _, student := range s.students {
-		student.CastedRoles.CastHuman().Eat()
+		student.CastHuman().Eat()
 	}
 	fmt.Println("students start to exam")
 	for _, student := range s.students {

@@ -11,6 +11,11 @@ type Worker struct {
 	data.WorkCard
 }
 
+// 员工角色特征
+type WorkerTrait interface {
+	CastWorker() *Worker
+}
+
 func (w *Worker) Compose(trait HumanTrait) {
 	w.HumanTrait = trait
 }

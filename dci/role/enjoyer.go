@@ -9,6 +9,11 @@ type Enjoyer struct {
 	HumanTrait
 }
 
+// 游玩者角色特征
+type EnjoyerTrait interface {
+	CastEnjoyer() *Enjoyer
+}
+
 func (e *Enjoyer) Compose(trait HumanTrait) {
 	e.HumanTrait = trait
 }
